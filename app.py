@@ -11,6 +11,7 @@ import os
 # 1. Create the Dash app and expose server for Render
 # ------------------------------------------------------------
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app.title = "Breton Wilson-Commodity Risk Dashboard"
 server = app.server
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -19,10 +20,11 @@ logging.basicConfig(level=logging.INFO)
 # 2. Commodity tickers (Yahoo Finance symbols)
 # ------------------------------------------------------------
 COMMODITIES = {
-    "Bitcoin": "BTC-USD",
+
+    "Copper": "HG=F",
     "Gold": "GC=F",
     "Silver": "SI=F",
-    "Copper": "HG=F"
+    "Bitcoin": "BTC-USD"
 }
 
 CACHE_DIR = "data_cache"
