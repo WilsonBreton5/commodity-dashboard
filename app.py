@@ -59,7 +59,7 @@ def fetch_commodity_data(ticker):
             df = pd.read_csv(cache_file, parse_dates=["Date"])
             logging.info(f"Loaded {ticker} data from cache.")
         else:
-            df = yf.download(ticker, period="5y", interval="1d")
+            df = yf.download(ticker, period="max", interval="1d")
             if df.empty:
                 raise ValueError("Yahoo returned empty data")
             
