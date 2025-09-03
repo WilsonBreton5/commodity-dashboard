@@ -35,6 +35,12 @@ os.makedirs(CACHE_DIR, exist_ok=True)
 # ------------------------------------------------------------
 app.layout = html.Div([
     html.H2("Commodity Risk Metrics Dashboard", style={"textAlign": "center"}),
+    
+    html.P(
+    "A normalized metric reflecting short- and long-term price deviations to highlight potential risk trends.",
+    style={"textAlign": "center", "color": "lightgray", "fontStyle": "italic", "marginBottom": "20px"}
+),
+
 
     dcc.Dropdown(
         id="commodity-dropdown",
