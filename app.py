@@ -11,6 +11,8 @@ import dash_bootstrap_components as dbc
 # ------------------------------------------------------------
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 server = app.server  # 👈 required for Render
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 # ------------------------------------------------------------
 # 2. Commodity tickers (Yahoo Finance symbols)
