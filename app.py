@@ -39,7 +39,7 @@ app.layout = html.Div([
     dcc.Dropdown(
         id="commodity-dropdown",
         options=[{"label": name, "value": ticker} for name, ticker in COMMODITIES.items()],
-        value="BTC-USD",
+        value="HG=F",
         clearable=False,
         style={
             "width": "300px",
